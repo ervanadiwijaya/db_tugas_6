@@ -1,0 +1,42 @@
+1. latihan_1
+
+ CREATE TABLE latihan_1 (
+    a INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    b VARCHAR(10) NOT NULL DEFAULT 'merdeka'
+    )ENGINE=MyISAM CHARSET=ascii;
+
+ ALTER TABLE latihan_1 AUTO_INCREMENT=100;
+
+2. change engine latihan_1
+
+ALTER TABLE latihan_1 ENGINE=innoDB;
+
+3. change name column in latihan_1
+
+ALTER TABLE latihan_1 CHANGE b c VARCHAR(10) NOT NULL DEFAULT 'merdeka';
+
+4. add new column
+
+ ALTER TABLE latihan_1 ADD COLUMN b DATE NOT NULL DEFAULT '2018-01-01' after a;
+
+5. clone db 
+
+CREATE TABLE latihan_2 LIKE latihan_1;
+
+6. change engine latihan_2
+
+ALTER TABLE latihan_1 ENGINE=MEMORY;
+
+7. change name table latihan_2
+
+ALTER TABLE latihan_2 RENAME latihan_3;
+
+8. create temporary table
+
+CREATE TEMPORARY TABLE latihan_4(
+    start TIMESTAMP 
+);
+
+9. drop table
+
+DROP TABLE latihan_1,latihan_3,latihan_4;
